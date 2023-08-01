@@ -23,9 +23,9 @@
         <img class="mx-auto w-16 block dark:hidden" src="../../assets/imgs/theme/SunLight.png" alt="Theme">
       </button>
       <button class="block sm:hidden text-6xl rounded bg-secondary bg-opacity-5 flex items-center"
-              :class="!this.menu&&'text-accent'" @click="openMenu()">
-        <span v-if="this.menu" class="i-ph-list-bold"></span>
-        <span v-if="!this.menu" class="i-ph-x-bold"></span>
+              :class="!menu&&'text-accent'" @click="openMenu()">
+        <span v-if="menu" class="i-ph-list-bold"></span>
+        <span v-if="!menu" class="i-ph-x-bold"></span>
       </button>
     </div>
     <div v-if="!this.menu" class="sm:hidden h-96">
@@ -60,9 +60,7 @@ export default {
       this.$colorMode.preference = theme
     },
     closeMenu() {
-      setTimeout(() => {
-        this.menu = true
-      }, 100);
+       this.menu = true
     },
     openMenu() {
       this.menu = !this.menu
