@@ -28,7 +28,7 @@
         <span v-if="!menu" class="i-ph-x-bold"></span>
       </button>
     </div>
-    <div v-if="!this.menu" class="sm:hidden h-96">
+    <div v-if="!menu" class="sm:hidden h-96">
       <div class="flex justify-center h-full text-center my-5">
         <ul @click="closeMenu()"  class="flex w-full px-5 flex-col justify-around">
           <li class="py-4 outline hover:font-medium rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a
