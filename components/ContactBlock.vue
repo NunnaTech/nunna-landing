@@ -57,6 +57,12 @@
           <button type="submit" class="btn btn-accent btn-lg">Enviar</button>
         </div>
       </form>
+      <div
+        v-if="showSuccessMessage"
+        class="text-green-500 text-xl font-bold mt-7"
+      >
+        ¡El formulario se envió correctamente!
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +89,13 @@ export default {
         emailInvalid: "El correo electrónico no es válido.",
         message: "El mensaje es requerido.",
       },
+      isSubmitting: false,
+      showSuccessMessage: false,
+      userAgent: "",
     };
+  },
+  mounted() {
+    this.userAgent = navigator.userAgent;
   },
   methods: {
     validateForm() {
@@ -111,6 +123,8 @@ export default {
       }
     },
     sendFormData() {
+      this.isSubmitting = true;
+
       fetch(API_FORM_URL, {
         method: "POST",
         headers: {
@@ -120,12 +134,25 @@ export default {
           name: this.formData.name,
           email: this.formData.email,
           message: this.formData.message,
+          user_agent: this.userAgent,
           created_at: new Date(),
         }),
       })
         .then((response) => response.json())
         .then((data) => console.log(data))
-        .catch((error) => console.log(error));
+        .catch((error) => console.log(error))
+        .finally(() => {
+          this.isSubmitting = false;
+          this.showSuccessMessage = true;
+          this.formData = {
+            name: "",
+            email: "",
+            message: "",
+          };
+        });
+      setTimeout(() => {
+        this.showSuccessMessage = false;
+      }, 5000);
     },
   },
 };
