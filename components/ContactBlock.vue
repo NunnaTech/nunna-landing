@@ -54,7 +54,7 @@
           </section>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg">Enviar</button>
+          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg" title="Enviar" role="button" aria-label="Enviar" aria-labelledby="Enviar">Enviar</button>
         </div>
       </form>
       <div
