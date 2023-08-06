@@ -2,12 +2,14 @@
 <!-- <BannerBlock/>-->
   <div class="container mx-auto text-2xl">
     <NavBar/>
+   <div class="px-5 sm:py-0">
     <HomeBlock/>
     <AboutBlock/>
     <ServicesBlock/>
     <UsBlock/>
     <ContactBlock/>
-    <FooterBlock/>
+  </div>
+  <FooterBlock/>
   </div>
 </template>
 
