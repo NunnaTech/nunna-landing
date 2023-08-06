@@ -54,7 +54,7 @@
           </section>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="btn btn-accent btn-lg">Enviar</button>
+          <button type="submit" class="btn btn-accent btn-lg" title="Enviar" role="button" aria-label="Enviar" aria-labelledby="Enviar">Enviar</button>
         </div>
       </form>
       <div
@@ -95,7 +95,7 @@ export default {
     };
   },
   mounted() {
-    this.userAgent = navigator.userAgent;
+    // this.userAgent = navigator.userAgent;
   },
   methods: {
     validateForm() {
