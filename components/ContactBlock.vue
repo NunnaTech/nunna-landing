@@ -13,7 +13,7 @@
         visión en una solución digital efectiva. Estamos aquí para ti."
       </p>
       <form @submit="handleSubmit">
-        <div class="grid grid-cols-2 gap-12 my-7">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12 my-7">
           <section>
             <input
               type="text"
@@ -38,7 +38,7 @@
               errors.email
             }}</span>
           </section>
-          <section class="col-span-2">
+          <section class="sm:col-span-2">
             <div class="flex flex-col">
               <textarea
                 class="text-xl textarea textarea-bordered bg-neutral w-full"
@@ -54,7 +54,7 @@
           </section>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="btn btn-accent btn-lg">Enviar</button>
+          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg" title="Enviar" role="button" aria-label="Enviar" aria-labelledby="Enviar">Enviar</button>
         </div>
       </form>
       <div
