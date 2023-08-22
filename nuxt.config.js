@@ -4,10 +4,10 @@ export default defineNuxtConfig({
         dataValue: 'theme', // activate data-theme in <html> tag
         preference: 'nunnadark', // default theme
     },
-    app:{
-        head:{
+    app: {
+        head: {
             title: 'Nunna Tech',
-            htmlAttrs:{
+            htmlAttrs: {
                 lang: 'es'
             },
             meta: [
@@ -19,9 +19,24 @@ export default defineNuxtConfig({
                 { hid: 'og:title', property: 'og:title', content: 'Nunna Tech' },
                 { hid: 'og:description', property: 'og:description', content: 'Nunna Tech Desarrolladora de Software' },
                 { hid: 'og:image', property: 'og:image', content: 'https://avatars.githubusercontent.com/u/92613716' },
-              ],
+            ],
+            script: [
+                {
+                    async: true,
+                    src: 'https://www.googletagmanager.com/gtag/js?id=G-E140WWZESC'
+                },
+                {
+                    hid: 'ga-script',
+                    innerHTML: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-E140WWZESC');
+                  `
+                }
+            ]
         },
     },
-    
+
 });
 
