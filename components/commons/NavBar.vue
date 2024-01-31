@@ -16,11 +16,11 @@
       </div>
       <div class="flex">
         <button @click="changeTheme()" title="Tema" role="button" aria-label="Tema" aria-labelledby="Tema">
-          <img class="mx-auto w-16 hidden dark:block" src="../../assets/imgs/theme/MoonDark.webp" alt="Theme" height="auto" width="auto">
-          <img class="mx-auto w-16 block dark:hidden" src="../../assets/imgs/theme/SunLight.webp" alt="Theme" height="auto" width="auto">
+          <img class="mx-auto w-16 hidden dark:block" src="../../assets/imgs/theme/MoonDark.webp" alt="Theme" height="500" width="500">
+          <img class="mx-auto w-16 block dark:hidden" src="../../assets/imgs/theme/SunLight.webp" alt="Theme" height="500" width="500">
         </button>
         <button>
-          <img :src="`https://flagsapi.com/${lang}/flat/64.png`" />
+          <img :src="urlmap" @click="changeLang()"  alt="Lang"/>
         </button>
       </div>
       <button class="block sm:hidden text-6xl rounded bg-secondary bg-opacity-5 flex items-center" :class="!menu&&'text-accent'" @click="openMenu()" title="Menú" role="button" aria-label="Menú" aria-labelledby="Menú">
@@ -46,7 +46,12 @@ export default {
   data() {
     return {
       menu: true,
-      lang: localStorage.getItem('lang').toUpperCase()
+      lang: localStorage.getItem('lang', 'mx')
+    }
+  },
+  computed:{
+    urlmap(){
+      return `https://flagsapi.com/${String(this.lang).toUpperCase()}/flat/64.png`
     }
   },
   methods: {
@@ -58,6 +63,16 @@ export default {
     },
     closeMenu() {
        this.menu = true
+    },
+    changeLang(){
+      if(this.lang === 'mx' || this.lang === 'MX'){
+        this.lang = 'us'
+        localStorage.setItem('lang', this.lang)
+      }else{
+        this.lang = 'mx'
+      }
+      this.$i18n.setLocale(this.lang);
+      localStorage.setItem('lang', this.lang)
     },
     openMenu() {
       this.menu = !this.menu

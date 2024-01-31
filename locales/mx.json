@@ -28,7 +28,14 @@
 
   },
   "Contact": {
-    "description": "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría escucharte! Contáctanos hoy y descubre cómo podemos transformar tu visión en una solución digital efectiva. Estamos aquí para ti."
+    "description": "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría escucharte! Contáctanos hoy y descubre cómo podemos transformar tu visión en una solución digital efectiva. Estamos aquí para ti.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "success": "El formulario se ha enviado correctamente"
+    }
   },
   "Footer": {
     "note": "Copyright © 2024 - All right reserved by Nunna"

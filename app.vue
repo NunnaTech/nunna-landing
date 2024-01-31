@@ -37,7 +37,7 @@ export default {
   mounted() {
     let lang = localStorage.getItem('lang');
     if(!lang){
-      let lang = 'us'
+      let lang = 'mx'
       localStorage.setItem('lang', lang);
     }
     this.$i18n.setLocale(lang);
