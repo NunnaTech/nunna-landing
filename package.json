@@ -11,10 +11,12 @@
   "dependencies": {
     "@egoist/tailwindcss-icons": "^1.1.0",
     "@iconify-json/ph": "^1.1.5",
+    "@nuxtjs/i18n": "^8.0.0",
     "@nuxtjs/robots": "^3.0.0",
     "daisyui": "^2.46.0",
     "nuxt": "^3.0.0",
-    "theme-change": "^2.5.0"
+    "theme-change": "^2.5.0",
+    "vue": "^3.4.15"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.3.0",

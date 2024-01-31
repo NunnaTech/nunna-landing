@@ -9,10 +9,10 @@ export default defineComponent({
 <template>
   <footer class="footer footer-center rounded text-xl">
     <div class="grid sm:grid-flow-col gap-4">
-      <a href="#about" class="link link-hover" aria-labelledby="¿Quiénes somos?">¿Quiénes somos?</a>
-      <a href="#services" class="link link-hover" aria-labelledby="Servicios">Servicios</a>
-      <a href="#us" class="link link-hover" aria-labelledby="Nosotros">Nosotros</a>
-      <a href="#contact" class="link link-hover" aria-labelledby="Contacto">Contacto</a>
+      <a href="#about" class="link link-hover" aria-labelledby="¿Quiénes somos?" v-t="'NavBar.title1'"/>
+      <a href="#services" class="link link-hover" aria-labelledby="Servicios" v-t="'NavBar.title2'"/>
+      <a href="#us" class="link link-hover" aria-labelledby="Nosotros" v-t="'NavBar.title3'"/>
+      <a href="#contact" class="link link-hover" aria-labelledby="Contacto" v-t="'NavBar.title3'"/>
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">
@@ -22,7 +22,7 @@ export default defineComponent({
       </div>
     </div>
     <div>
-      <p>Copyright © 2023 - All right reserved by Nunna</p>
+      <p>Copyright © {{ new Date().getFullYear() }} - All right reserved by Nunna</p>
     </div>
   </footer>
 </template>

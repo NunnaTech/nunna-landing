@@ -1,74 +1,61 @@
 <template>
   <div
-    id="contact"
-    class="w-full h-full sm:h-screen sm:flex sm:items-center sm:justify-center"
+      id="contact"
+      class="w-full h-full sm:h-screen sm:flex sm:items-center sm:justify-center"
   >
     <div class="py-5">
-      <h1 class="text-center text-accent font-bold text-4xl sm:text-6xl mb-2">
-        Contáctanos
-      </h1>
-      <p class="text-justify sm:text-center">
-        "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría
-        escucharte! Contáctanos hoy y descubre cómo podemos transformar tu
-        visión en una solución digital efectiva. Estamos aquí para ti."
-      </p>
+      <h1 class="text-center text-accent font-bold text-4xl sm:text-6xl mb-2" v-t="'NavBar.title4'"/>
+      <p class="text-justify sm:text-center" v-t="'Contact.description'"/>
       <form @submit="handleSubmit">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12 my-7">
           <section>
             <input
-              type="text"
-              placeholder="Nombre Completo"
-              class="input input-bordered bg-neutral w-full text-xl"
-              v-model="formData.name"
-              @blur="errors.name = ''"
+                type="text"
+                :placeholder="$t('Contact.form.name')"
+                class="input input-bordered bg-neutral w-full text-xl"
+                v-model="formData.name"
+                @blur="errors.name = ''"
             />
-            <span class="ml-4 text-red-500 text-xl font-bold">{{
-              errors.name
-            }}</span>
+            <span class="ml-4 text-red-500 text-xl font-bold">{{errors.name}}</span>
           </section>
           <section>
             <input
-              type="email"
-              placeholder="Correo Electrónico"
-              class="input input-bordered bg-neutral w-full text-xl"
-              v-model="formData.email"
-              @blur="errors.email = ''"
+                type="email"
+                :placeholder="$t('Contact.form.email')"
+                class="input input-bordered bg-neutral w-full text-xl"
+                v-model="formData.email"
+                @blur="errors.email = ''"
             />
-            <span class="ml-4 text-red-500 text-xl font-bold">{{
-              errors.email
-            }}</span>
+            <span class="ml-4 text-red-500 text-xl font-bold">{{errors.email}}</span>
           </section>
           <section class="sm:col-span-2">
             <div class="flex flex-col">
               <textarea
-                class="text-xl textarea textarea-bordered bg-neutral w-full"
-                placeholder="Mensaje"
-                rows="5"
-                v-model="formData.message"
-                @blur="errors.message = ''"
-              ></textarea>
-              <span class="ml-4 text-red-500 text-xl font-bold">{{
-                errors.message
-              }}</span>
+                  class="text-xl textarea textarea-bordered bg-neutral w-full"
+                  :placeholder="$t('Contact.form.message')"
+                  rows="5"
+                  v-model="formData.message"
+                  @blur="errors.message = ''"
+              />
+              <span class="ml-4 text-red-500 text-xl font-bold">{{errors.message}}</span>
             </div>
           </section>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg" title="Enviar" role="button" aria-label="Enviar" aria-labelledby="Enviar">Enviar</button>
+          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg" role="button" aria-label="Enviar"
+                  aria-labelledby="Enviar" v-t="'Contact.form.send'"/>
         </div>
       </form>
       <div
-        v-if="showSuccessMessage"
-        class="text-green-500 text-xl font-bold mt-7"
-      >
-        ¡El formulario se envió correctamente!
-      </div>
+          v-if="showSuccessMessage"
+          class="text-green-500 text-xl font-bold mt-7" v-t="'Contact.form.success'"/>
     </div>
   </div>
 </template>
 
 <script>
-import { API_FORM_URL } from "../constants.js";
+import {API_FORM_URL} from "../constants.js";
+
 export default {
   name: "ContactBlock",
   data() {
@@ -101,13 +88,13 @@ export default {
     validateForm() {
       this.errors.name = !this.formData.name ? this.errorsMessage.name : "";
       this.errors.email = !this.formData.email
-        ? this.errorsMessage.email
-        : !this.isValidEmail(this.formData.email)
-        ? this.errorsMessage.emailInvalid
-        : "";
+          ? this.errorsMessage.email
+          : !this.isValidEmail(this.formData.email)
+              ? this.errorsMessage.emailInvalid
+              : "";
       this.errors.message = !this.formData.message
-        ? this.errorsMessage.message
-        : "";
+          ? this.errorsMessage.message
+          : "";
     },
     isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -138,18 +125,18 @@ export default {
           created_at: new Date(),
         }),
       })
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        .catch((error) => console.log(error))
-        .finally(() => {
-          this.isSubmitting = false;
-          this.showSuccessMessage = true;
-          this.formData = {
-            name: "",
-            email: "",
-            message: "",
-          };
-        });
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.log(error))
+          .finally(() => {
+            this.isSubmitting = false;
+            this.showSuccessMessage = true;
+            this.formData = {
+              name: "",
+              email: "",
+              message: "",
+            };
+          });
       setTimeout(() => {
         this.showSuccessMessage = false;
       }, 5000);

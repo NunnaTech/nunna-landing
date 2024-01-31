@@ -1,0 +1,36 @@
+{
+  "NavBar": {
+    "title1": "¿Quiénes somos?",
+    "title2": "Servicios",
+    "title3": "Nosotros",
+    "title4": "Contacto"
+  },
+  "Home": {
+    "title": "Impulsando conexiones, creando soluciones.",
+    "subtitle": "Aplicaciones para todos, en todo lugar.",
+    "description": "En Nunna, no solo convertimos tus ideas en realidad, sino que las elevamos al siguiente nivel y así ofrecer servicios de calidad a tus clientes."
+  },
+  "About": {
+    "description1": "Nuestro equipo de desarrolladores expertos se dedica a entender tus necesidades y transformarlas en soluciones efectivas y atractivas. Ya sea una aplicación web, móvil o de escritorio, podemos diseñarla para que sea intuitiva, innovadora y, sobre todo, eficaz.",
+    "description2": "Nuestro objetivo no es solo cumplir tus expectativas, sino superarlas. Trabajamos en estrecha colaboración contigo para garantizar que tu visión se haga realidad con la mejor tecnología y diseño a tu disposición. Tu éxito es nuestro éxito, y estamos comprometidos a poner nuestras habilidades y experiencia a trabajar para ti."
+  },
+  "Services": {
+    "title1": "Desarrollo Personalizado de Aplicaciones",
+    "description1": "Trabajamos contigo para entender tu visión y crear una aplicación a medida que se ajuste a tus necesidades y objetivos comerciales. Desde el diseño hasta el lanzamiento, te acompañamos en cada paso del proceso.",
+    "title2": "Optimización para Múltiples Plataformas",
+    "description2": "Nuestras aplicaciones no solo funcionan, sino que brillan en todas las plataformas. Ya sea iOS, Android o web, optimizamos tu aplicación para garantizar una experiencia de usuario fluida e intuitiva en cualquier dispositivo.",
+    "title3": "Soporte Técnico Integral",
+    "description3": "Creemos que nuestro trabajo no termina con el lanzamiento de tu aplicación. Ofrecemos soporte técnico integral para asegurar que tu aplicación siga funcionando a la perfección y se mantenga actualizada con las últimas tendencias y tecnologías.*",
+    "title4": "Estrategia y Análisis de Datos",
+    "description4": "Con nuestro enfoque basado en datos, te ayudamos a entender a tu público objetivo y cómo interactúan con tu aplicación. Usamos estas ideas para mejorar la funcionalidad y el diseño, con la finalidad de formular estrategias de marketing efectivas."
+  },
+  "Us": {
+
+  },
+  "Contact": {
+    "description": "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría escucharte! Contáctanos hoy y descubre cómo podemos transformar tu visión en una solución digital efectiva. Estamos aquí para ti."
+  },
+  "Footer": {
+    "note": "Copyright © 2024 - All right reserved by Nunna"
+  }
+}

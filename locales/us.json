@@ -1,0 +1,43 @@
+{
+  "NavBar": {
+    "title1": "Who are we?",
+    "title2": "Services",
+    "title3": "Us",
+    "title4": "Contact"
+  },
+  "Home": {
+    "title": "Driving connections, creating solutions.",
+    "subtitle": "Applications for everyone, everywhere.",
+    "description": "At Nunna, we not only turn your ideas into reality, but we take them to the next level to offer quality services to your customers."
+  },
+  "About": {
+    "description1": "Our team of expert developers is dedicated to understanding your needs and transforming them into effective and attractive solutions. Whether it's a web, mobile, or desktop application, we can design it to be intuitive, innovative, and above all, effective.",
+    "description2": "Our goal is not only to meet your expectations, but to exceed them. We work closely with you to ensure that your vision becomes a reality with the best technology and design at your disposal. Your success is our success, and we are committed to putting our skills and experience to work for you."
+  },
+  "Services": {
+    "title1": "Custom Application Development",
+    "description1": "We work with you to understand your vision and create a custom application that fits your needs and business goals. From design to launch, we accompany you at every step of the process.",
+    "title2": "Optimization for Multiple Platforms",
+    "description2": "Our applications not only work, but shine on all platforms. Whether it's iOS, Android, or web, we optimize your application to ensure a smooth and intuitive user experience on any device.",
+    "title3": "Comprehensive Technical Support",
+    "description3": "We believe that our work does not end with the launch of your application. We offer comprehensive technical support to ensure that your application continues to run smoothly and stays up-to-date with the latest trends and technologies.",
+    "title4": "Strategy and Data Analysis",
+    "description4": "With our data-driven approach, we help you understand your target audience and how they interact with your application. We use these insights to improve functionality and design, and to formulate effective marketing strategies."
+  },
+  "Us": {
+
+  },
+  "Contact": {
+    "description": "Ready to take your idea to the next level? We'd love to hear from you! Contact us today and find out how we can transform your vision into an effective digital solution. We're here for you.",
+    "form": {
+      "name": "Fullname",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "success": "Form sent successfully!"
+    }
+  },
+  "Footer": {
+    "note": "Copyright © 2024 - All right reserved by Nunna"
+  }
+}
