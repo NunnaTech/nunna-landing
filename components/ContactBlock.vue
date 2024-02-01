@@ -71,10 +71,10 @@ export default {
         message: "",
       },
       errorsMessage: {
-        name: "El nombre es requerido.",
-        email: "El correo electrónico es requerido.",
-        emailInvalid: "El correo electrónico no es válido.",
-        message: "El mensaje es requerido.",
+        name: this.$t('Contact.form.errorsMessages.name'),
+        email: this.$t('Contact.form.errorsMessages.email'),
+        emailInvalid: this.$t('Contact.form.errorsMessages.emailInvalid'),
+        message: this.$t('Contact.form.errorsMessages.message'),
       },
       isSubmitting: false,
       showSuccessMessage: false,
@@ -86,12 +86,12 @@ export default {
   },
   methods: {
     validateForm() {
+      this.errorsMessage.name = this.$t('Contact.form.errorsMessages.name');
+      this.errorsMessage.email = this.$t('Contact.form.errorsMessages.email');
+      this.errorsMessage.emailInvalid = this.$t('Contact.form.errorsMessages.emailInvalid');
+      this.errorsMessage.message = this.$t('Contact.form.errorsMessages.message');
       this.errors.name = !this.formData.name ? this.errorsMessage.name : "";
-      this.errors.email = !this.formData.email
-          ? this.errorsMessage.email
-          : !this.isValidEmail(this.formData.email)
-              ? this.errorsMessage.emailInvalid
-              : "";
+      this.errors.email = !this.formData.email ? this.errorsMessage.email: !this.isValidEmail(this.formData.email) ? this.errorsMessage.emailInvalid : "";
       this.errors.message = !this.formData.message
           ? this.errorsMessage.message
           : "";
@@ -102,7 +102,6 @@ export default {
     },
 
     handleSubmit(event) {
-      console.log("Formulario handleSubmit");
       event.preventDefault();
       this.validateForm();
       if (!Object.values(this.errors).some((error) => error !== "")) {

@@ -2,8 +2,8 @@
     <div class="mt-5 flex items-center justify-around sm:justify-between text-center">
       <div class="">
         <a href="#" aria-labelledby="Nunna">
-          <img class="hidden dark:block mx-auto w-16 h-auto" src="../../assets/imgs/logo/NunnaDark.svg" alt="Logo">
-          <img class="block dark:hidden mx-auto w-16 h-auto" src="../../assets/imgs/logo/NunnaLight.svg" alt="Logo">
+          <img class="hidden dark:block mx-auto w-10 h-auto" src="../../assets/imgs/logo/NunnaDark.svg" alt="Logo">
+          <img class="block dark:hidden mx-auto w-10 h-auto" src="../../assets/imgs/logo/NunnaLight.svg" alt="Logo">
         </a>
       </div>
       <div class="w-full hidden sm:block">
@@ -15,15 +15,15 @@
         </ul>
       </div>
       <div class="flex">
-        <button @click="changeTheme()" title="Tema" role="button" aria-label="Tema" aria-labelledby="Tema">
-          <img class="mx-auto w-16 hidden dark:block" src="../../assets/imgs/theme/MoonDark.webp" alt="Theme" height="500" width="500">
-          <img class="mx-auto w-16 block dark:hidden" src="../../assets/imgs/theme/SunLight.webp" alt="Theme" height="500" width="500">
+        <button class="mr-2" @click="changeTheme()" title="Tema" role="button" aria-label="Tema" aria-labelledby="Tema">
+          <img class="mx-auto w-10 hidden dark:block" src="../../assets/imgs/theme/MoonDark.webp" alt="Theme" height="500" width="500">
+          <img class="mx-auto w-10 block dark:hidden" src="../../assets/imgs/theme/SunLight.webp" alt="Theme" height="500" width="500">
         </button>
         <button>
           <img :src="urlmap" @click="changeLang()"  alt="Lang"/>
         </button>
       </div>
-      <button class="block sm:hidden text-6xl rounded bg-secondary bg-opacity-5 flex items-center" :class="!menu&&'text-accent'" @click="openMenu()" title="Menú" role="button" aria-label="Menú" aria-labelledby="Menú">
+      <button class="block sm:hidden text-5xl rounded bg-secondary bg-opacity-5 flex items-center" :class="!menu&&'text-accent'" @click="openMenu()" title="Menú" role="button" aria-label="Menú" aria-labelledby="Menú">
         <span v-if="menu" class="i-ph-list-bold"></span>
         <span v-if="!menu" class="i-ph-x-bold"></span>
       </button>
@@ -51,7 +51,7 @@ export default {
   },
   computed:{
     urlmap(){
-      return `https://flagsapi.com/${String(this.lang).toUpperCase()}/flat/64.png`
+      return `https://flagsapi.com/${String(this.lang).toUpperCase()}/flat/48.png`
     }
   },
   methods: {

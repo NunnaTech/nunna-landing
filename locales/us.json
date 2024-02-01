@@ -34,7 +34,13 @@
       "email": "Email",
       "message": "Message",
       "send": "Send",
-      "success": "Form sent successfully!"
+      "success": "Form sent successfully!",
+      "errorsMessages": {
+        "name": "Required.",
+        "email": "Required.",
+        "emailInvalid": "Invalid.",
+        "message": "Required."
+      }
     }
   },
   "Footer": {

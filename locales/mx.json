@@ -34,7 +34,13 @@
       "email": "Correo electrónico",
       "message": "Mensaje",
       "send": "Enviar",
-      "success": "El formulario se ha enviado correctamente"
+      "success": "El formulario se ha enviado correctamente",
+      "errorsMessages": {
+        "name": "Requerido.",
+        "email": "Requerido.",
+        "emailInvalid": "Invalido",
+        "message": "Requerido."
+      }
     }
   },
   "Footer": {
