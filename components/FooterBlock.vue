@@ -1,18 +1,7 @@
-<script>
-import {defineComponent} from 'vue'
-
-export default defineComponent({
-  name: "FooterBlock"
-})
-</script>
-
 <template>
   <footer class="footer footer-center rounded text-xl">
     <div class="grid sm:grid-flow-col gap-4">
-      <a href="#about" class="link link-hover" aria-labelledby="¿Quiénes somos?" v-t="'NavBar.title1'"/>
-      <a href="#services" class="link link-hover" aria-labelledby="Servicios" v-t="'NavBar.title2'"/>
-      <a href="#us" class="link link-hover" aria-labelledby="Nosotros" v-t="'NavBar.title3'"/>
-      <a href="#contact" class="link link-hover" aria-labelledby="Contacto" v-t="'NavBar.title3'"/>
+      <a :key="i" v-for="({href, label}, i) in $tm('NavBar')" :href="$rt(href)" class="link link-hover" :aria-labelledby="$rt(label)">{{ $rt(label) }}</a>
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">
@@ -21,12 +10,16 @@ export default defineComponent({
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
       </div>
     </div>
-    <div>
+    <div class="mb-5">
       <p>Copyright © {{ new Date().getFullYear() }} - All right reserved by Nunna</p>
     </div>
   </footer>
 </template>
 
-<style scoped>
+<script>
+import { defineComponent } from 'vue'
 
-</style>
+export default defineComponent({
+  name: "FooterBlock",
+})
+</script>

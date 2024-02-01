@@ -1,13 +1,13 @@
 <template>
   <div
       id="contact"
-      class="w-full h-full sm:h-screen sm:flex sm:items-center sm:justify-center"
+      class="sm:min-h-screen w-full sm:flex sm:items-center sm:justify-center"
   >
     <div class="py-5">
-      <h1 class="text-center text-accent font-bold text-4xl sm:text-6xl mb-2" v-t="'NavBar.title4'"/>
-      <p class="text-justify sm:text-center" v-t="'Contact.description'"/>
-      <form @submit="handleSubmit">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12 my-7">
+      <h1 class="my-5 text-center text-accent font-bold text-4xl sm:text-6xl" v-t="'NavBar.3.label'"/>
+      <p class="my-4 font-light text-justify sm:text-center" v-t="'Contact.description'"/>
+      <form class="my-4" @submit="handleSubmit">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-12">
           <section>
             <input
                 type="text"
@@ -42,7 +42,7 @@
           </section>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="w-full sm:w-auto btn btn-accent btn-lg" role="button" aria-label="Enviar"
+          <button type="submit" class="w-full my-4 sm:w-auto btn btn-accent btn-lg" role="button" aria-label="Enviar"
                   aria-labelledby="Enviar" v-t="'Contact.form.send'"/>
         </div>
       </form>
