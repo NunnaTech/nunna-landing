@@ -16,22 +16,22 @@
   ],
   "ServicesBlock": [
     { 
-      "icon": "i-ph-person-arms-spread",
+      "icon": "mdiApplicationBracketsOutline",
       "title": "Custom Application Development",
       "description": "We work with you to understand your vision and create a custom application that fits your needs and business goals. From design to launch, we accompany you at every step of the process."
     },
     { 
-      "icon": "i-ph-devices",
+      "icon": "mdiDevices",
       "title": "Optimization for Multiple Platforms",
       "description": "Our applications not only work, but shine on all platforms. Whether it's iOS, Android, or web, we optimize your application to ensure a smooth and intuitive user experience on any device."
     },
     { 
-      "icon": "i-ph-shield-plus",
+      "icon": "mdiShieldPlusOutline",
       "title": "Comprehensive Technical Support",
       "description": "We believe that our work does not end with the launch of your application. We offer comprehensive technical support to ensure that your application continues to run smoothly and stays up-to-date with the latest trends and technologies."
     },
     { 
-      "icon": "i-ph-database",
+      "icon": "mdiDatabaseOutline",
       "title": "Strategy and Data Analysis",
       "description": "With our data-driven approach, we help you understand your target audience and how they interact with your application. We use these insights to improve functionality and design, and to formulate effective marketing strategies."
     }
@@ -47,6 +47,7 @@
       "message": "Message",
       "send": "Send",
       "success": "Form sent successfully!",
+      "error": "An error has occurred, please try again later.",
       "errorsMessages": {
         "name": "Required.",
         "email": "Required.",
