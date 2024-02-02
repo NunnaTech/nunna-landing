@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5 flex items-center justify-around sm:justify-between text-center">
+    <div class="flex items-center justify-around sm:justify-between text-center">
       <div class="">
         <a href="#" aria-labelledby="Nunna">
           <img class="hidden dark:block mx-auto w-10 h-auto" src="../../assets/imgs/logo/NunnaDark.svg" alt="Logo">
@@ -8,10 +8,9 @@
       </div>
       <div class="w-full hidden sm:block">
         <ul class="flex justify-evenly">
-          <li class="py-2 px-3 rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#about" aria-labelledby="¿Quiénes somos?" v-t="'NavBar.title1'"/></li>
-          <li class="py-2 px-3 rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#services" aria-labelledby="Servicios" v-t="'NavBar.title2'"/></li>
-          <li class="py-2 px-3 rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#us" aria-labelledby="Nosotros" v-t="'NavBar.title3'"/></li>
-          <li class="py-2 px-3 rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#contact" aria-labelledby="Contacto" v-t="'NavBar.title4'"/></li>
+          <li :key="i" v-for="({ href, label }, i) in $tm(`${this.$options.name}`)" class="py-2 px-3 rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5">
+            <a :href="$rt(href)" :aria-labelledby="$rt(label)">{{ $rt(label) }}</a>
+          </li>
         </ul>
       </div>
       <div class="flex">
@@ -29,12 +28,11 @@
       </button>
     </div>
     <div v-if="!menu" class="sm:hidden h-96">
-      <div class="flex justify-center h-full text-center my-5">
+      <div class="flex justify-center h-full text-center">
         <ul @click="closeMenu()"  class="flex w-full px-5 flex-col justify-around">
-          <li class="py-4 outline rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#about" aria-labelledby="¿Quiénes somos?" v-t="'NavBar.title1'"/></li>
-          <li class="py-4 outline rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#services" aria-labelledby="Servicios" v-t="'NavBar.title2'"/></li>
-          <li class="py-4 outline rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#us" aria-labelledby="Nosotros" v-t="'NavBar.title3'"/></li>
-          <li class="py-4 outline rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5"><a href="#contact" aria-labelledby="Contacto" v-t="'NavBar.title4'"/></li>
+          <li :key="i" v-for="({ href, label }, i) in $tm(`${this.$options.name}`)" class="py-4 outline rounded-lg hover:text-accent hover:bg-primary hover:bg-opacity-5">
+            <a :href="$rt(href)" :aria-labelledby="$rt(label)">{{ $rt(label) }}</a>
+          </li>
         </ul>
       </div>
     </div>
