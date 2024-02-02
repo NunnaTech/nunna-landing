@@ -19,12 +19,11 @@
           <img class="mx-auto w-10 block dark:hidden" src="~/assets/imgs/theme/SunLight.webp" alt="Theme" height="500" width="500">
         </button>
         <button>
-          <img :src="urlmap" @click="changeLang()"  :alt="`${lang} flag`"/>
+          <img :src="urlmap" @click="changeLang()" :alt="`${lang} flag`"/>
         </button>
       </div>
       <button class="block sm:hidden text-5xl rounded bg-secondary bg-opacity-5 flex items-center" :class="!menu&&'text-accent'" @click="openMenu()" title="Menú" role="button" aria-label="Menú" aria-labelledby="Menú">
-        <MdiIcon v-if="menu" icon="mdiMenu"/>
-        <MdiIcon v-else icon="mdiClose"/>
+        <MdiIcon :icon="menu ? 'mdiMenu' : 'mdiClose'"/>
       </button>
     </div>
     <div v-if="!menu" class="sm:hidden h-96">
