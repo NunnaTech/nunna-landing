@@ -1,6 +1,6 @@
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/robots', '@nuxtjs/i18n'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/robots', '@nuxtjs/i18n', 'nuxt-mdi'],
     colorMode: {
         dataValue: 'theme', // activate data-theme in <html> tag
         preference: 'nunnadark' // default theme

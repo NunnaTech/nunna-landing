@@ -46,100 +46,29 @@
                   aria-labelledby="Enviar" v-t="'Contact.form.send'"/>
         </div>
       </form>
-      <div
-          v-if="showSuccessMessage"
-          class="text-green-500 text-xl font-bold mt-7" v-t="'Contact.form.success'"/>
+
+      <div v-if="showSuccessMessage" role="alert" class="alert alert-success">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span class="w-100 text-end" v-t="'Contact.form.success'" />
+      </div>
+      
+      <div v-if="showErrorMessage" role="alert" class="alert alert-error">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span class="w-100 text-end" v-t="'Contact.form.error'" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import {API_FORM_URL} from "../constants.js";
+import {MixinContactBlock} from "../mixins/MixinContactBlock";
+import {ContactBlockData} from "../data-components/ContactBlockData";
 
 export default {
   name: "ContactBlock",
   data() {
-    return {
-      formData: {
-        name: "",
-        email: "",
-        message: "",
-      },
-      errors: {
-        name: "",
-        email: "",
-        message: "",
-      },
-      errorsMessage: {
-        name: this.$t('Contact.form.errorsMessages.name'),
-        email: this.$t('Contact.form.errorsMessages.email'),
-        emailInvalid: this.$t('Contact.form.errorsMessages.emailInvalid'),
-        message: this.$t('Contact.form.errorsMessages.message'),
-      },
-      isSubmitting: false,
-      showSuccessMessage: false,
-      userAgent: "",
-    };
+    return ContactBlockData;
   },
-  mounted() {
-    this.userAgent = navigator.userAgent;
-  },
-  methods: {
-    validateForm() {
-      this.errorsMessage.name = this.$t('Contact.form.errorsMessages.name');
-      this.errorsMessage.email = this.$t('Contact.form.errorsMessages.email');
-      this.errorsMessage.emailInvalid = this.$t('Contact.form.errorsMessages.emailInvalid');
-      this.errorsMessage.message = this.$t('Contact.form.errorsMessages.message');
-      this.errors.name = !this.formData.name ? this.errorsMessage.name : "";
-      this.errors.email = !this.formData.email ? this.errorsMessage.email: !this.isValidEmail(this.formData.email) ? this.errorsMessage.emailInvalid : "";
-      this.errors.message = !this.formData.message
-          ? this.errorsMessage.message
-          : "";
-    },
-    isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    },
-
-    handleSubmit(event) {
-      event.preventDefault();
-      this.validateForm();
-      if (!Object.values(this.errors).some((error) => error !== "")) {
-        this.sendFormData();
-      }
-    },
-    sendFormData() {
-      this.isSubmitting = true;
-
-      fetch(API_FORM_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: this.formData.name,
-          email: this.formData.email,
-          message: this.formData.message,
-          user_agent: this.userAgent,
-          created_at: new Date(),
-        }),
-      })
-          .then((response) => response.json())
-          .then((data) => console.log(data))
-          .catch((error) => console.log(error))
-          .finally(() => {
-            this.isSubmitting = false;
-            this.showSuccessMessage = true;
-            this.formData = {
-              name: "",
-              email: "",
-              message: "",
-            };
-          });
-      setTimeout(() => {
-        this.showSuccessMessage = false;
-      }, 5000);
-    },
-  },
+  mixins:[MixinContactBlock]
 };
 </script>

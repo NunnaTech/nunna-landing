@@ -1,11 +1,6 @@
-const { iconsPlugin, getIconCollections } = require("@egoist/tailwindcss-icons")
-
 module.exports = {
     plugins: [
         require('daisyui'),
-        iconsPlugin({
-            collections: getIconCollections(["ph"]),
-        }),
     ],
     darkMode: ['class', '[data-theme="nunnadark"]'],
     daisyui: {

@@ -16,22 +16,22 @@
   ],
   "ServicesBlock": [
     { 
-      "icon": "i-ph-person-arms-spread",
+      "icon": "mdiApplicationBracketsOutline",
       "title": "Desarrollo Personalizado de Aplicaciones",
       "description": "Trabajamos contigo para entender tu visión y crear una aplicación a medida que se ajuste a tus necesidades y objetivos comerciales. Desde el diseño hasta el lanzamiento, te acompañamos en cada paso del proceso."
     },
     { 
-      "icon": "i-ph-devices",
+      "icon": "mdiDevices",
       "title": "Optimización para Múltiples Plataformas",
       "description": "Nuestras aplicaciones no solo funcionan, sino que brillan en todas las plataformas. Ya sea iOS, Android o web, optimizamos tu aplicación para garantizar una experiencia de usuario fluida e intuitiva en cualquier dispositivo."
     },
     { 
-      "icon": "i-ph-shield-plus",
+      "icon": "mdiShieldPlusOutline",
       "title": "Soporte Técnico Integral",
       "description": "Creemos que nuestro trabajo no termina con el lanzamiento de tu aplicación. Ofrecemos soporte técnico integral para asegurar que tu aplicación siga funcionando a la perfección y se mantenga actualizada con las últimas tendencias y tecnologías.*"
     },
     { 
-      "icon": "i-ph-database",
+      "icon": "mdiDatabaseOutline",
       "title": "Estrategia y Análisis de Datos",
       "description": "Con nuestro enfoque basado en datos, te ayudamos a entender a tu público objetivo y cómo interactúan con tu aplicación. Usamos estas ideas para mejorar la funcionalidad y el diseño, con la finalidad de formular estrategias de marketing efectivas."
     }
@@ -46,7 +46,8 @@
       "email": "Correo electrónico",
       "message": "Mensaje",
       "send": "Enviar",
-      "success": "El formulario se ha enviado correctamente",
+      "success": "El formulario se ha enviado correctamente.",
+      "error": "Ha ocurrido un error, favor de intentarlo más tarde.",
       "errorsMessages": {
         "name": "Requerido.",
         "email": "Requerido.",
