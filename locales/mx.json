@@ -1,0 +1,61 @@
+{
+  "NavBar": [
+    { "href": "#about", "label": "¿Quiénes somos?" },
+    { "href": "#services", "label": "Servicios" },
+    { "href": "#us", "label": "Nosotros" },
+    { "href": "#contact", "label": "Contacto" }
+  ],
+  "Home": {
+    "title": "Impulsando conexiones, creando soluciones.",
+    "subtitle": "Aplicaciones para todos, en todo lugar.",
+    "description": "En Nunna, no solo convertimos tus ideas en realidad, sino que las elevamos al siguiente nivel y así ofrecer servicios de calidad a tus clientes."
+  },
+  "AboutBlock": [
+    "Nuestro equipo de desarrolladores expertos se dedica a entender tus necesidades y transformarlas en soluciones efectivas y atractivas. Ya sea una aplicación web, móvil o de escritorio, podemos diseñarla para que sea intuitiva, innovadora y, sobre todo, eficaz.",
+    "Nuestro objetivo no es solo cumplir tus expectativas, sino superarlas. Trabajamos en estrecha colaboración contigo para garantizar que tu visión se haga realidad con la mejor tecnología y diseño a tu disposición. Tu éxito es nuestro éxito, y estamos comprometidos a poner nuestras habilidades y experiencia a trabajar para ti."
+  ],
+  "ServicesBlock": [
+    { 
+      "icon": "i-ph-person-arms-spread",
+      "title": "Desarrollo Personalizado de Aplicaciones",
+      "description": "Trabajamos contigo para entender tu visión y crear una aplicación a medida que se ajuste a tus necesidades y objetivos comerciales. Desde el diseño hasta el lanzamiento, te acompañamos en cada paso del proceso."
+    },
+    { 
+      "icon": "i-ph-devices",
+      "title": "Optimización para Múltiples Plataformas",
+      "description": "Nuestras aplicaciones no solo funcionan, sino que brillan en todas las plataformas. Ya sea iOS, Android o web, optimizamos tu aplicación para garantizar una experiencia de usuario fluida e intuitiva en cualquier dispositivo."
+    },
+    { 
+      "icon": "i-ph-shield-plus",
+      "title": "Soporte Técnico Integral",
+      "description": "Creemos que nuestro trabajo no termina con el lanzamiento de tu aplicación. Ofrecemos soporte técnico integral para asegurar que tu aplicación siga funcionando a la perfección y se mantenga actualizada con las últimas tendencias y tecnologías.*"
+    },
+    { 
+      "icon": "i-ph-database",
+      "title": "Estrategia y Análisis de Datos",
+      "description": "Con nuestro enfoque basado en datos, te ayudamos a entender a tu público objetivo y cómo interactúan con tu aplicación. Usamos estas ideas para mejorar la funcionalidad y el diseño, con la finalidad de formular estrategias de marketing efectivas."
+    }
+  ],
+  "Us": {
+
+  },
+  "Contact": {
+    "description": "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría escucharte! Contáctanos hoy y descubre cómo podemos transformar tu visión en una solución digital efectiva. Estamos aquí para ti.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "success": "El formulario se ha enviado correctamente",
+      "errorsMessages": {
+        "name": "Requerido.",
+        "email": "Requerido.",
+        "emailInvalid": "Invalido",
+        "message": "Requerido."
+      }
+    }
+  },
+  "Footer": {
+    "note": "Copyright © 2024 - All right reserved by Nunna"
+  }
+}

@@ -1,8 +1,18 @@
+
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/robots',],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/robots', '@nuxtjs/i18n'],
     colorMode: {
         dataValue: 'theme', // activate data-theme in <html> tag
-        preference: 'nunnadark', // default theme
+        preference: 'nunnadark' // default theme
+    },
+    i18n: {
+        locales: [
+            { code: 'mx', iso: 'es-MX', file: 'mx.json' },
+            { code: 'us', iso: 'en-US', file: 'us.json' }
+        ],
+        defaultLocale: 'mx',
+        langDir: 'locales/',
+        lazy: true
     },
     app: {
         head: {

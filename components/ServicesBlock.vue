@@ -1,61 +1,17 @@
 <template>
-  <div id="services" class="w-full h-full sm:h-screen sm:flex sm:items-center sm:justify-center">
+  <div id="services" class="sm:min-h-screen w-full sm:flex sm:items-center sm:justify-center">
     <div class="py-5">
-      <h1 class="text-center text-accent font-bold text-4xl sm:text-6xl">
-        Servicios
-      </h1>
-      <div class="grid grid-rows-4 gap-5">
-        <div class="text-justify sm:text-left">
-          <div class="w-full flex justify-center sm:justify-start">
+      <h1 class="my-5 text-center text-accent font-bold text-4xl sm:text-6xl" v-t="'NavBar.1.label'"/>
+      <div class="gap-5">
+        <div :key="i" v-for="({icon, title, description}, i) in $tm(`${this.$options.name}`)" :class="`my-7 grid md:grid-flow-row-dense md:grid-rows-1 md:grid-cols-6 text-justify ${this.setPositionClasses('alignment-text', i)}`">
+          <div :class="`my-7 w-full flex justify-center ${this.setPositionClasses('alignment-div-and-icon', i)}`">
             <div class="flex items-center justify-center w-16 h-16 bg-accent text-white rounded-full">
-              <span class="i-ph-person-arms-spread w-1/2 h-1/2"></span>
+              <span :class="`${$rt(icon)} w-1/2 h-1/2`"></span>
             </div>
           </div>
-          <div>
-            <h2 class="font-medium my-2">Desarrollo Personalizado de Aplicaciones</h2>
-            <p>Trabajamos contigo para entender tu visión y crear una aplicación a medida que se ajuste a tus
-              necesidades
-              y objetivos comerciales. Desde el diseño hasta el lanzamiento, te acompañamos en cada paso del
-              proceso.</p>
-          </div>
-        </div>
-        <div class="text-justify sm:text-right">
-          <div class="w-full flex justify-center sm:justify-end">
-            <div class="flex items-center justify-center w-16 h-16 bg-accent text-white rounded-full">
-              <span class="i-ph-devices w-1/2 h-1/2"></span>
-            </div>
-          </div>
-          <div>
-            <h2 class="font-medium my-2">Optimización para Múltiples Plataformas</h2>
-            <p>Nuestras aplicaciones no solo funcionan, sino que brillan en todas las plataformas. Ya sea iOS, Android o
-              web, optimizamos tu aplicación para garantizar una experiencia de usuario fluida e intuitiva en cualquier
-              dispositivo.</p>
-          </div>
-        </div>
-        <div class="text-justify sm:text-left">
-          <div class="w-full flex justify-center sm:justify-start">
-            <div class="flex items-center justify-center w-16 h-16 bg-accent text-white rounded-full">
-              <span class="i-ph-shield-plus w-1/2 h-1/2"></span>
-            </div>
-          </div>
-          <div>
-            <h2 class="font-medium my-2">Soporte Técnico Integral</h2>
-            <p>Creemos que nuestro trabajo no termina con el lanzamiento de tu aplicación. Ofrecemos soporte técnico
-              integral para asegurar que tu aplicación siga funcionando a la perfección y se mantenga actualizada con
-              las últimas tendencias y tecnologías.*</p>
-          </div>
-        </div>
-        <div class="text-justify sm:text-right">
-          <div class="w-full flex justify-center sm:justify-end">
-            <div class="flex items-center justify-center w-16 h-16 bg-accent text-white rounded-full">
-              <span class="i-ph-database w-1/2 h-1/2"></span>
-            </div>
-          </div>
-          <div>
-            <h2 class="font-medium my-2">Estrategia y Análisis de Datos</h2>
-            <p>Con nuestro enfoque basado en datos, te ayudamos a entender a tu público objetivo y cómo interactúan con
-              tu aplicación. Usamos estas ideas para mejorar la funcionalidad y el diseño, con la finalidad de formular
-              estrategias de marketing efectivas.</p>
+          <div class="md:col-span-5">
+            <h2 class="font-medium">{{ $rt(title) }}</h2>
+            <p class="my-4 font-light">{{ $rt(description) }}</p>
           </div>
         </div>
       </div>
@@ -64,7 +20,26 @@
 </template>
 
 <script>
-export default {
-  name: "ServicesBlock",
+import { defineComponent } from 'vue'
+
+const ELEMENTS = {
+  "alignment-text": ["sm:text-left", "sm:text-right"],
+  "alignment-div-and-icon": ["md:order-first sm:text-start", "md:order-last sm:text-end"],
 }
+
+export default defineComponent({
+  name: "ServicesBlock",
+
+  methods: {
+    /**
+     * Get classes to draw in landing.
+     * @param {String} element 
+     * @param {Number} position 
+     * @returns {String}
+     */
+    setPositionClasses(element, position) {
+      return ELEMENTS[element][position % 2]
+    }
+  }
+})
 </script>
