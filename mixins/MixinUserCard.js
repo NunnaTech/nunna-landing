@@ -10,10 +10,10 @@ export const MixinUserCard = {
     },
     methods: {
         getUser() {
-            console.log(`USERNAME => ${this.username}`);
             fetch(`https://api.github.com/users/${this.username}`)
                 .then(res => res.json())
                 .then(data => {this.user = data})
+    
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer footer-center rounded text-xl">
     <div class="grid sm:grid-flow-col gap-4">
-      <a :key="i" v-for="({href, label}, i) in $tm('NavBar')" :href="$rt(href)" class="link link-hover" :aria-labelledby="$rt(label)">{{ $rt(label) }}</a>
+      <a :key="i" v-for="({href, label}, i) in $tm($options.name)" :href="$rt(href)" class="link link-hover" :aria-labelledby="$rt(label)">{{ $rt(label) }}</a>
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">

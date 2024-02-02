@@ -17,5 +17,6 @@ export const ContactBlockData = {
     },
     isSubmitting: false,
     showSuccessMessage: false,
+    showErrorMessage: false,
     userAgent: "",
 }

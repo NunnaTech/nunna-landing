@@ -28,7 +28,7 @@ export const MixinNavBar = {
     },
     computed:{
         urlmap(){
-            return `https://flagsapi.com/${String(this.lang).toUpperCase()}/flat/48.png`
+            return `https://flagsapi.com/${String(this.lang ?? 'us').toUpperCase()}/flat/48.png`
         }
     },
 }

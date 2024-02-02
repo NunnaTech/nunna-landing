@@ -43,27 +43,42 @@ export const MixinContactBlock = {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    name: this.formData.name,
+                    fullname: this.formData.name,
                     email: this.formData.email,
                     message: this.formData.message,
-                    user_agent: this.userAgent,
-                    created_at: new Date(),
+                    userAgent: this.userAgent
                 }),
             })
-                .then((response) => response.json())
-                .then((data) => console.log(data))
-                .catch((error) => console.log(error))
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json()
+                    }
+
+                    this.showErrorMessage = true
+                })
+                .then((data) => {
+                    this.isSubmitting = false
+
+                    if (data.status === 201) {
+                        this.showSuccessMessage = true
+                        return
+                    }
+
+                    this.showErrorMessage = true
+                })
+                .catch((error) => {
+                    this.showErrorMessage = true
+                })
                 .finally(() => {
-                    this.isSubmitting = false;
-                    this.showSuccessMessage = true;
+                    this.isSubmitting = false
                     this.formData = {
                         name: "",
                         email: "",
                         message: "",
-                    };
-                });
+                    }
+                })
             setTimeout(() => {
-                this.showSuccessMessage = false;
+                this.showErrorMessage = this.showSuccessMessage = false;
             }, 5000);
         },
     },

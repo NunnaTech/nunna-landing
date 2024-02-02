@@ -1,3 +1,5 @@
-export const UserCardData = {
-    user: {}
+export const UserCardData = () => {
+    return {
+        user: {}
+    }
 }
