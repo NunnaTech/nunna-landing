@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-around sm:justify-between text-center">
+    <div class="flex items-center justify-around sm:justify-between text-center mt-4">
       <div class="">
         <a href="#" aria-labelledby="Nunna">
           <img class="hidden dark:block mx-auto w-10 h-auto" src="../../assets/imgs/logo/NunnaDark.svg" alt="Logo">
@@ -39,42 +39,14 @@
 </template>
 
 <script>
+import {MixinNavBar} from "../../mixins/MixinNavBar";
+import {NavBarData} from "../../data-components/NavBarData";
+
 export default {
   name: "NavBar",
   data() {
-    return {
-      menu: true,
-      lang: localStorage.getItem('lang', 'mx')
-    }
+    return NavBarData;
   },
-  computed:{
-    urlmap(){
-      return `https://flagsapi.com/${String(this.lang).toUpperCase()}/flat/48.png`
-    }
-  },
-  methods: {
-    changeTheme() {
-      let theme = localStorage.getItem('nuxt-color-mode')
-      if (theme === 'nunnadark') theme = 'nunnalight'
-      else theme = 'nunnadark'
-      this.$colorMode.preference = theme
-    },
-    closeMenu() {
-       this.menu = true
-    },
-    changeLang(){
-      if(this.lang === 'mx' || this.lang === 'MX'){
-        this.lang = 'us'
-        localStorage.setItem('lang', this.lang)
-      }else{
-        this.lang = 'mx'
-      }
-      this.$i18n.setLocale(this.lang);
-      localStorage.setItem('lang', this.lang)
-    },
-    openMenu() {
-      this.menu = !this.menu
-    }
-  },
+  mixins:[MixinNavBar]
 }
 </script>

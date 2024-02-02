@@ -16,29 +16,14 @@
 
 <script>
 import {defineComponent} from 'vue'
+import {MixinUserCard} from "../../mixins/MixinUserCard";
+import {UserCardData} from "../../data-components/UserCardData";
 
 export default defineComponent({
   name: "UserCard",
-  props: {
-    username: {
-      type: String,
-      required: true
-    }
-  },
   data() {
-    return {
-      user: {}
-    }
+    return UserCardData;
   },
-  mounted() {
-    this.getUser()
-  },
-  methods: {
-    getUser() {
-      fetch(`https://api.github.com/users/${this.username}`)
-        .then(res => res.json())
-        .then(data => {this.user = data})
-    }
-  }
+  mixins:[MixinUserCard]
 })
 </script>

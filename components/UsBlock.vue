@@ -12,18 +12,13 @@
 
 <script>
 import UserCard from "./commons/UserCard.vue";
+import {UsBlockData} from "../data-components/UsBlockData";
 
 export default {
   name: "UsBlock",
   components: {UserCard},
   data() {
-    return {
-      usernames:['AlexisLoya', 'GandyA23', 'JairDavid', 'Sterplay2010', 'SebastianCarv', 'DallasSpawn', 'HectorSaldes', 'RodriguezJose88', 'Luenalor']
-    }
+    return UsBlockData;
   },
-  mounted() {
-
-  },
-  methods: {}
 }
 </script>
