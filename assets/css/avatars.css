@@ -1,0 +1,25 @@
+@import url(https://unpkg.com/css-peeps@1/css-peeps.css);
+
+/** Add here new avatars to new team partnerts **/
+@import url(avatars/AlexisLoya.css);
+@import url(avatars/GandyA23.css);
+@import url(avatars/JairDavid.css);
+@import url(avatars/Luenalor.css);
+@import url(avatars/SebastianCarv.css);
+@import url(avatars/DallasSpawn.css);
+@import url(avatars/HectorSaldes.css);
+@import url(avatars/RodriguezJose88.css);
+@import url(avatars/Sterplay2010.css);
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+}
+
+.avatar-dark {
+    background: #12C2A3;
+}
+
+.avatar-light {
+    background: #2E3440;
+}

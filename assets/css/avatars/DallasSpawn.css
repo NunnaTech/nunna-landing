@@ -1,0 +1,15 @@
+.DallasSpawn {
+    --peep-head: flat-top1;
+    --peep-face: eyes-closed;
+    --peep-accessory: glasses3;
+    --peep-facial-hair: mustache3;
+    --peep-body: shirt-coat;
+
+    --peep-hat-color: #FC03C2;
+    --peep-hair-color: #7300E6;
+    --peep-skin-color: #87ceeb;
+    --peep-accessory-color: #00ff00;
+    --peep-facial-hair-color: #ffd700;
+    --peep-object-color: #ffa500;
+    --peep-clothes-color: #ff0000;
+}

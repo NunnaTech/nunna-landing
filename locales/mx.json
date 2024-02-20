@@ -1,9 +1,21 @@
 {
   "NavBar": [
-    { "href": "#about", "label": "¿Quiénes somos?" },
-    { "href": "#services", "label": "Servicios" },
-    { "href": "#us", "label": "Nosotros" },
-    { "href": "#contact", "label": "Contacto" }
+    {
+      "href": "#about",
+      "label": "¿Quiénes somos?"
+    },
+    {
+      "href": "#services",
+      "label": "Servicios"
+    },
+    {
+      "href": "#us",
+      "label": "Nosotros"
+    },
+    {
+      "href": "#contact",
+      "label": "Contacto"
+    }
   ],
   "Home": {
     "title": "Impulsando conexiones, creando soluciones.",
@@ -15,29 +27,37 @@
     "Nuestro objetivo no es solo cumplir tus expectativas, sino superarlas. Trabajamos en estrecha colaboración contigo para garantizar que tu visión se haga realidad con la mejor tecnología y diseño a tu disposición. Tu éxito es nuestro éxito, y estamos comprometidos a poner nuestras habilidades y experiencia a trabajar para ti."
   ],
   "ServicesBlock": [
-    { 
+    {
       "icon": "mdiApplicationBracketsOutline",
       "title": "Desarrollo Personalizado de Aplicaciones",
       "description": "Trabajamos contigo para entender tu visión y crear una aplicación a medida que se ajuste a tus necesidades y objetivos comerciales. Desde el diseño hasta el lanzamiento, te acompañamos en cada paso del proceso."
     },
-    { 
+    {
       "icon": "mdiDevices",
       "title": "Optimización para Múltiples Plataformas",
       "description": "Nuestras aplicaciones no solo funcionan, sino que brillan en todas las plataformas. Ya sea iOS, Android o web, optimizamos tu aplicación para garantizar una experiencia de usuario fluida e intuitiva en cualquier dispositivo."
     },
-    { 
+    {
       "icon": "mdiShieldPlusOutline",
       "title": "Soporte Técnico Integral",
       "description": "Creemos que nuestro trabajo no termina con el lanzamiento de tu aplicación. Ofrecemos soporte técnico integral para asegurar que tu aplicación siga funcionando a la perfección y se mantenga actualizada con las últimas tendencias y tecnologías.*"
     },
-    { 
+    {
       "icon": "mdiDatabaseOutline",
       "title": "Estrategia y Análisis de Datos",
       "description": "Con nuestro enfoque basado en datos, te ayudamos a entender a tu público objetivo y cómo interactúan con tu aplicación. Usamos estas ideas para mejorar la funcionalidad y el diseño, con la finalidad de formular estrategias de marketing efectivas."
     }
   ],
   "Us": {
-
+    "AlexisLoya": "Dev Python: Ágil y Creativo",
+    "GandyA23": "Dev Vue: Innovador y Detallista",
+    "JairDavid": "Dev Java: Detallista",
+    "Luenalor": "Dev UX: Empático y Creativo",
+    "SebastianCarv": "Diseñador UX: Intuitivo y Agudo",
+    "DallasSpawn": "Dev React: Ágil e Innovador",
+    "HectorSaldes": "Dev Vue: Creativo y Preciso",
+    "RodriguezJose88": "Dev JS: Creativo y Resolutivo",
+    "Sterplay2010": "Dev Vue: Ágil y Enfocado en Detalles"
   },
   "Contact": {
     "description": "¿Listo para llevar tu idea al siguiente nivel? ¡Nos encantaría escucharte! Contáctanos hoy y descubre cómo podemos transformar tu visión en una solución digital efectiva. Estamos aquí para ti.",
