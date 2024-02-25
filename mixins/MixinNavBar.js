@@ -27,8 +27,17 @@ export const MixinNavBar = {
         }
     },
     computed:{
+        iconByColorModePreference() {
+            return `nunna-logo-${this.$colorMode.preference === "nunnadark" ? 'dark' : 'light'}`
+        },
         urlmap(){
-            return `https://flagsapi.com/${String(this.lang ?? 'us').toUpperCase()}/flat/48.png`
+            return {
+                icon: `${this.lang ?? 'us'}-flag`,
+                viewBox: '0 0 36 36',
+                width: '48px',
+                height: '48px',
+                ignoreDefaultStyles: true, 
+            }
         }
     },
 }

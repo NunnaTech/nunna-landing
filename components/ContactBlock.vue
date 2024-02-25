@@ -1,7 +1,7 @@
 <template>
   <div
       id="contact"
-      class="sm:min-h-screen w-full sm:flex sm:items-center sm:justify-center"
+      class="w-full sm:flex sm:items-center sm:justify-center"
   >
     <div class="py-5">
       <h1 class="my-5 text-center text-accent font-bold text-4xl sm:text-6xl" v-t="'NavBar.3.label'"/>
@@ -48,17 +48,23 @@
       </form>
 
       <div v-if="showSuccessMessage" role="alert" class="alert alert-success">
-        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <MdiIcon icon="mdiCheckCircle" />
         <span class="w-100 text-end" v-t="'Contact.form.success'" />
       </div>
       
       <div v-if="showErrorMessage" role="alert" class="alert alert-error">
-        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <MdiIcon icon="mdiAlphaXCircle" />
         <span class="w-100 text-end" v-t="'Contact.form.error'" />
       </div>
     </div>
   </div>
 </template>
+
+<style>
+  svg {
+    width: 2.25rem;
+  }
+</style>
 
 <script>
 import {MixinContactBlock} from "../mixins/MixinContactBlock";

@@ -14,6 +14,8 @@
 .avatar {
     width: 6rem;
     height: 6rem;
+
+    --peep-body-offset-y: 10px;
 }
 
 .avatar-dark {

@@ -24,8 +24,5 @@ export default {
   data() {
     return UsBlockData;
   },
-  mounted() {
-    console.log(this.users_data);
-  }
 }
 </script>
