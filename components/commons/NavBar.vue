@@ -2,8 +2,7 @@
     <div class="flex items-center justify-around sm:justify-between text-center mt-4">
       <div class="">
         <a href="#" aria-labelledby="Nunna">
-          <img class="hidden dark:block mx-auto w-10 h-auto" src="~/assets/imgs/logo/NunnaDark.svg" alt="Logo">
-          <img class="block dark:hidden mx-auto w-10 h-auto" src="~/assets/imgs/logo/NunnaLight.svg" alt="Logo">
+          <Icon v-bind="nunnaLogo" v-bind:icon="iconByColorModePreference" />
         </a>
       </div>
       <div class="w-full hidden sm:block">
@@ -19,7 +18,7 @@
           <img class="mx-auto w-10 block dark:hidden" src="~/assets/imgs/theme/SunLight.webp" alt="Theme" height="500" width="500">
         </button>
         <button>
-          <img :src="urlmap" @click="changeLang()" :alt="`${lang} flag`"/>
+          <Icon v-bind="urlmap" @click="changeLang()" />
         </button>
       </div>
       <button class="block sm:hidden text-5xl rounded bg-secondary bg-opacity-5 flex items-center" :class="!menu&&'text-accent'" @click="openMenu()" title="Menú" role="button" aria-label="Menú" aria-labelledby="Menú">
@@ -40,9 +39,11 @@
 <script>
 import {MixinNavBar} from "../../mixins/MixinNavBar";
 import {NavBarData} from "../../data-components/NavBarData";
+import Icon from "./Icon.vue";
 
 export default {
   name: "NavBar",
+  components: { Icon },
   data() {
     return NavBarData;
   },

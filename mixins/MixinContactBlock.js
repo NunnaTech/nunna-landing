@@ -2,7 +2,7 @@ import {API_FORM_URL} from "../constants";
 
 export const MixinContactBlock = {
     mounted() {
-        this.userAgent = navigator.userAgent;
+        this.userAgent = window.navigator.userAgent;
         this.errorsMessage = {
             name: this.$t('Contact.form.errorsMessages.name'),
                 email: this.$t('Contact.form.errorsMessages.email'),
