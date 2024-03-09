@@ -5,17 +5,17 @@
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">
-        <a :key="index" v-for="(icon, index) in icons" class="text-4xl mx-2" :href="icon.href" target="_blank">
+        <a :key="index" v-for="(icon, index) in icons" class="text-4xl mx-2" aria-label="See all Nunna post on Twitter" :href="icon.href" target="_blank">
           <Icon v-bind="icon" />
         </a>
 
-        <a class="text-4xl mx-2" href="https://www.linkedin.com/in/nunna-tech-dev/" target="_blank">
+        <a class="text-4xl mx-2" href="https://www.linkedin.com/in/nunna-tech-dev/" aria-label="See all Nunna post on LinkedIn" target="_blank">
           <MdiIcon icon="mdiLinkedin" />
         </a>
-        <a class="text-4xl mx-2" href="https://www.facebook.com/profile.php?id=61555465208464" target="_blank">
+        <a class="text-4xl mx-2" href="https://www.facebook.com/profile.php?id=61555465208464" aria-label="See all Nunna post on Facebook" target="_blank">
           <MdiIcon icon="mdiFacebook" />
         </a>
-        <a class="text-4xl mx-2" href=" https://www.youtube.com/@NunnaTech" target="_blank">
+        <a class="text-4xl mx-2" href=" https://www.youtube.com/@NunnaTech" aria-label="See all Nunna videos on YouTube" target="_blank">
           <MdiIcon icon="mdiYoutube" />
         </a>
       </div>

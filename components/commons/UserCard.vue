@@ -5,13 +5,13 @@
     <h2 class="text-accent font-medium">{{user.name}}</h2>
     <p class="my-4 truncate font-light" v-t="`Us.${user.social_media.github}`" />
     <div class="w-full flex items-center justify-around text-3xl py-3">
-      <a v-if="user.social_media.linkedin" :href="`https://www.linkedin.com/in/${user.social_media.linkedin}`" target="_blank" :aria-labelledby="`LinkedIn ${user.name}`">
+      <a v-if="user.social_media.linkedin" :href="`https://www.linkedin.com/in/${user.social_media.linkedin}`" target="_blank" :aria-label="`See all ${user.name} job experience on LinkedIn`">
         <MdiIcon icon="mdiLinkedin"/>
       </a>
-      <a v-if="user.social_media.github" :href="`https://github.com/${user.social_media.github}`" target="_blank" :aria-labelledby="`Github ${user.name}`">
+      <a v-if="user.social_media.github" :href="`https://github.com/${user.social_media.github}`" target="_blank" :aria-label="`See all ${user.name} repositories on GitHub`">
         <MdiIcon icon="mdiGithub"/>
       </a>
-      <a v-if="user.social_media.twitter" :href="`https://twitter.com/${user.social_media.twitter}`" target="_blank" :aria-labelledby="'Twitter ' + user.name">
+      <a v-if="user.social_media.twitter" :href="`https://twitter.com/${user.social_media.twitter}`" target="_blank" :aria-label="`See all ${user.name} post on Twitter`">
         <Icon :icon="'twitter'" :width="'2rem'" :height="'2rem'"  />
       </a>
     </div>
