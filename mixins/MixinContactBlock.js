@@ -37,7 +37,7 @@ export const MixinContactBlock = {
         sendFormData() {
             this.isSubmitting = true;
 
-            fetch(API_FORM_URL, {
+            fetch(`${API_FORM_URL}/contacts`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

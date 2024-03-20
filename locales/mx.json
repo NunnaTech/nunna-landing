@@ -1,21 +1,10 @@
 {
   "NavBar": [
-    {
-      "href": "#about",
-      "label": "¿Quiénes somos?"
-    },
-    {
-      "href": "#services",
-      "label": "Servicios"
-    },
-    {
-      "href": "#us",
-      "label": "Nosotros"
-    },
-    {
-      "href": "#contact",
-      "label": "Contacto"
-    }
+    {"href": "#about", "label": "¿Quiénes somos?"},
+    {"href": "#services", "label": "Servicios"},
+    {"href": "#projects", "label": "Proyectos"},
+    {"href": "#us", "label": "Nosotros"},
+    {"href": "#contact", "label": "Contacto"}
   ],
   "Home": {
     "title": "Impulsando conexiones, creando soluciones.",

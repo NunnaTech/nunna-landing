@@ -6,6 +6,7 @@
     <HomeBlock/>
     <AboutBlock/>
     <ServicesBlock/>
+    <ProjectsBlock/>
     <UsBlock/>
     <ContactBlock/>
   </div>
@@ -22,6 +23,7 @@ import ServicesBlock from "./components/ServicesBlock.vue";
 import UsBlock from "./components/UsBlock.vue";
 import ContactBlock from "./components/ContactBlock.vue";
 import FooterBlock from "./components/FooterBlock.vue";
+import ProjectsBlock from "./components/ProjectsBlock.vue";
 
 export default {
   components: {
@@ -30,6 +32,7 @@ export default {
     HomeBlock,
     AboutBlock,
     ServicesBlock,
+    ProjectsBlock,
     UsBlock,
     ContactBlock,
     FooterBlock
