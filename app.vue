@@ -4,6 +4,7 @@
     <NavBar/>
    <div class="px-5 sm:py-0">
     <HomeBlock/>
+    <IdentityBlock/>
     <AboutBlock/>
     <ServicesBlock/>
     <ProjectsBlock/>
@@ -24,12 +25,14 @@ import UsBlock from "./components/UsBlock.vue";
 import ContactBlock from "./components/ContactBlock.vue";
 import FooterBlock from "./components/FooterBlock.vue";
 import ProjectsBlock from "./components/ProjectsBlock.vue";
+import IdentityBlock from "./components/IdentityBlock.vue";
 
 export default {
   components: {
     BannerBlock,
     NavBar,
     HomeBlock,
+    IdentityBlock,
     AboutBlock,
     ServicesBlock,
     ProjectsBlock,

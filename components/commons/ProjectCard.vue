@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div class="p-5 px-10 w-full rounded-3xl dark:bg-[#091629] shadow-md border border-primary border-opacity-20">
+  <div class="p-5 px-10 w-full rounded-3xl shadow-md border border-primary border-opacity-20">
     <h3 class="text-right text-sm">{{ formatDate(project.date) }}</h3>
     <img class="w-14 h-14 mb-8" :src="project.images.logo" alt="Logo">
     <img class="w-full rounded-lg my-2" :src="project.images.cover" alt="Logo">

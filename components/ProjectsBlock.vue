@@ -30,7 +30,6 @@ export default {
       fetch(`${API_FORM_URL}/projects?lang=${this.lang}`)
           .then(response => response.json())
           .then(data => {
-            console.log(data.data)
             this.projects = data.data;
           });
     }
@@ -40,9 +39,9 @@ export default {
 
 <template>
   <div id="projects" class="w-full sm:min-h-screen flex items-center justify-center">
-    <div class="py-5 w-full ">
-      <h1 class="my-5 text-center text-accent font-bold text-4xl sm:text-6xl" v-t="'NavBar.2.label'"/>
-      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-5">
+    <div class="py-5 w-full text-center">
+      <h1 class="my-5 font-bold text-4xl sm:text-6xl bg-gradient-to-r from-teal-500 to-violet-500 inline-block text-transparent bg-clip-text" v-t="'NavBar.2.label'"/>
+      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-5 text-left">
         <ProjectCard v-for="(project, i) in projects" :key="i" :project="project"/>
       </div>
     </div>

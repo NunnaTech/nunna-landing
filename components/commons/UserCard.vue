@@ -1,19 +1,36 @@
 <template>
-  <div class="p-1 text-center w-full rounded-3xl bg-neutral bg-opacity-20 backdrop-filter backdrop-blur-md shadow-md border border-primary border-opacity-20">
-    <a :class="`hidden dark:block my-4 mask mask-circle mx-auto w-1/2 sm:w-1/5 py-5 css-peeps avatar avatar-dark ${user.social_media.github}`" :src="user.avatar_url" :alt="user.name"></a>
-    <a :class="`block dark:hidden my-4 mask mask-circle mx-auto w-1/2 sm:w-1/5 py-5 css-peeps avatar avatar-light ${user.social_media.github}`" :src="user.avatar_url" :alt="user.name"></a>
-    <h2 class="text-accent font-medium">{{user.name}}</h2>
-    <p class="my-4 truncate font-light" v-t="`Us.${user.social_media.github}`" />
-    <div class="w-full flex items-center justify-around text-3xl py-3">
-      <a v-if="user.social_media.linkedin" :href="`https://www.linkedin.com/in/${user.social_media.linkedin}`" target="_blank" :aria-label="`See all ${user.name} job experience on LinkedIn`">
-        <MdiIcon icon="mdiLinkedin"/>
+  <div
+      class="p-5 text-center w-full rounded-3xl bg-neutral bg-opacity-20 backdrop-filter backdrop-blur-md shadow-md border border-primary border-opacity-20">
+
+
+    <a :class="`hidden dark:block my-4 mask mask-circle mx-auto w-1/2 sm:w-1/5 py-5 css-peeps avatar avatar-dark ${user.social_media.github}`"
+       :src="user.avatar_url" :alt="user.name"></a>
+
+    <a :class="`block dark:hidden my-4 mask mask-circle mx-auto w-1/2 sm:w-1/5 py-5 css-peeps avatar avatar-light ${user.social_media.github}`"
+       :src="user.avatar_url" :alt="user.name"></a>
+
+    <h2 class="text-accent font-medium">{{ user.name }}</h2>
+
+    <p class="my-4 truncate font-light" v-t="`Us.${user.social_media.github}`"/>
+
+
+    <div class="w-full flex items-center justify-around text-3xl ">
+      <a v-if="user.social_media.linkedin" :href="`https://www.linkedin.com/in/${user.social_media.linkedin}`"
+         target="_blank" :aria-label="`See all ${user.name} job experience on LinkedIn`">
+        <Icon :icon="'linkedin'" :width="'2rem'" :height="'2rem'"/>
       </a>
-      <a v-if="user.social_media.github" :href="`https://github.com/${user.social_media.github}`" target="_blank" :aria-label="`See all ${user.name} repositories on GitHub`">
-        <MdiIcon icon="mdiGithub"/>
+
+      <a v-if="user.social_media.github" :href="`https://github.com/${user.social_media.github}`" target="_blank"
+         :aria-label="`See all ${user.name} repositories on GitHub`">
+        <Icon :icon="'github'" :width="'2rem'" :height="'2rem'"/>
+
       </a>
-      <a v-if="user.social_media.twitter" :href="`https://twitter.com/${user.social_media.twitter}`" target="_blank" :aria-label="`See all ${user.name} post on Twitter`">
-        <Icon :icon="'twitter'" :width="'2rem'" :height="'2rem'"  />
+
+      <a v-if="user.social_media.twitter" :href="`https://twitter.com/${user.social_media.twitter}`" target="_blank"
+         :aria-label="`See all ${user.name} post on Twitter`">
+        <Icon :icon="'twitter'" :width="'2rem'" :height="'2rem'"/>
       </a>
+
     </div>
   </div>
 </template>
@@ -28,11 +45,11 @@ import {UserCardData} from "../../data-components/UserCardData";
 export default defineComponent({
   name: "UserCard",
 
-  components: { Icon },
+  components: {Icon},
 
   data() {
     return UserCardData();
   },
-  mixins:[MixinUserCard]
+  mixins: [MixinUserCard]
 })
 </script>
