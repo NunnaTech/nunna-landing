@@ -27,9 +27,8 @@ export default {
     <p class="text-justify">{{ project.large_description }}</p>
 
     <div class="flex flex-wrap items-center justify-around mt-2">
-      <span v-for="(tech, i) in project.tech_stack" :key="i"
-            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-accent text-white ">
-      {{ tech }}
+      <span v-for="(tech, i) in project.tech_stack" :key="i" class="px-3 py-0.5 rounded-full">
+        <img :src="`https://img.shields.io/badge/${tech}-000?style=for-the-badge&logo=${tech}`" :alt="tech" class="w-28">
     </span>
     </div>
 
