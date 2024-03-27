@@ -1,4 +1,5 @@
 module.exports = {
+    purge: ['./src/**/*.{js,jsx,ts,tsx,vue}', './public/index.html'],
     plugins: [
         require('daisyui'),
     ],

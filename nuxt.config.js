@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
     buildModules: ['nuxt-compress'],
     modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/robots', '@nuxtjs/i18n', 'nuxt-mdi'],
